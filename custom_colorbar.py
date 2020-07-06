@@ -86,7 +86,7 @@ def _determine_figure_boundary(x,y,dx,dy,w,h,direction):
     fig_len = (max(x[-1], y[-1]) + max(w,h))*1.1
     if direction == 'vertical':
         x_boundary = [-fig_len/2, fig_len/2]
-        y_boundary = [0, y[-1]+dy+h]
+        y_boundary = [y[-1]+dy+h, 0]
     elif direction == 'horizontal':
         x_boundary = [0, x[-1]+dx+w]
         y_boundary = [-fig_len/2, fig_len/2]
