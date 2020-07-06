@@ -114,8 +114,8 @@ def draw_colormap(df_colormap, ax,w, h, g, text_offset=None, direction='vertical
     ax: the ax object after drawing the colormap
     """
     # extract colors and text lists from df.
-    colors = df_colormap['color']
-    tlist = df_colormap['text']
+    colors = df_colormap['color'].values
+    tlist = df_colormap['text'].values
     if len(colors)!=len(tlist):
         raise ValueError('number of colors does not match number of names')
     # create color boxes
